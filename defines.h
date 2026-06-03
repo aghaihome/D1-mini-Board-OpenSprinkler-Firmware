@@ -381,7 +381,7 @@ enum {
 
 	#define PIN_CURR_SENSE    A0    // current sensing pin
 	#define PIN_LATCH_VOLT_SENSE A0 // latch voltage sensing pin
-	#define PIN_FREE_LIST     {} // no free GPIO pin at the moment
+	#define PIN_FREE_LIST     {12,13} // D1 Mini: GPIO12/D6 and GPIO13/D7 used as GPIO stations; sensors disabled below
 	#define ETHER_BUFFER_SIZE   2048
 
 	#define PIN_ETHER_CS       16 // Ethernet CS (chip select pin) is 16 on OS 3.2 and above
@@ -414,8 +414,8 @@ enum {
 	#define V0_PIN_PWR_TX        IOEXP_PIN+2
 	#define V0_PIN_BOOST         IOEXP_PIN+6
 	#define V0_PIN_BOOST_EN      IOEXP_PIN+7
-	#define V0_PIN_SENSOR1       12 // sensor 1
-	#define V0_PIN_SENSOR2       13 // sensor 2
+	#define V0_PIN_SENSOR1       255 // sensor 1 disabled; GPIO12 is free
+	#define V0_PIN_SENSOR2       255 // sensor 2 disabled; GPIO13 is free
 
 	/* OS31 pin defines */
 	// pins on PCA9555A IO expander have pin numbers IOEXP_PIN+i
